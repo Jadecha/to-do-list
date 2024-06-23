@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Lista de tareas</title>
+</head>
+<style>
+     body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0; /* Eliminar margen predeterminado del cuerpo */
+    }
+
+    .titulo {
+        margin-top: 20px; /* Espacio superior para el título */
+    }
+
+    #input-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #input {
+        padding: 10px;
+        border: none;
+        width: 200px;
+    }
+
+    #guardar {
+        padding: 10px 20px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #lista-container {
+        border-top: 2px solid #333;
+        padding: 10px;  
+        overflow-y: auto;
+        max-height: 300px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+    .pendiente-btn {
+    padding: 5px 10px; /* Ajustar el relleno */
+    border: none; /* Eliminar el borde */
+    background-color: rgb(253, 137, 28); /* Color de fondo */
+    color: #fff; /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    margin-left: 200px; /* Esto colocará el botón siempre al extremo derecho */
+    margin-right: 0;
+    border-radius: 20px; /* Hacer los bordes circulares */
+}
+    .completado-btn {
+        background-color:rgb(24, 221, 73);
+    }
+
+</style>
+<body>
+    <h1 class="titulo">Todo List</h1>
+    <div id="input-container">
+        <input type="text" id="input" placeholder="añadir nueva tarea">
+        <button id ="guardar">guardar</button>
+    </div>
+
+    <div id="lista-container">
+        <ul id="lista">
+        </ul>
+    </div>
+<script src="script.js" defer></script>
+</body>
+</html>
